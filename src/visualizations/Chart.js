@@ -7,47 +7,103 @@ class Chart extends Component {
     componentDidMount(){
         this.showChart();
     }
+    getSeriesData = (data) => {
+        var seriesData = [];
+        var passData = {}, errorData = {}, failData = {};
+        passData['name'] = 'pass';
+        errorData['name'] = 'error';
+        failData['name'] = 'fail';
+        passData['color'] = '#00ff00';
+        errorData['color'] = '#FFA500';
+        failData['color'] = '#ff0000';
+        passData['data'] = [];
+        errorData['data'] = [];
+        failData['data'] = [];
+        data.forEach((d) => {
+            var point = [];
+            var date = new Date(d.start_time);
+            var unixtime = date.getTime();
+            point.push(unixtime);
+            point.push(d.duration/60);
+            if(d.status === 'pass'){
+                passData.data.push(point);
+            }else if(d.status === 'fail'){
+                failData.data.push(point);
+            }else{
+                errorData.data.push(point);
+            }
+        });
+        seriesData.push(passData);seriesData.push(failData);seriesData.push(errorData);
+        return seriesData;
+    }
     showChart = () => {
-        const { title, subtitle, yAxis, seriesData, categories } = this.props.visualization;
+        const data = this.props.data;
         const visualizationId = this.props.visualizationId;
-        const visualizationType = this.props.visualizationType;
         Highcharts.chart( visualizationId, {
             chart: {
-                type: visualizationType
-            },
-            title: {
-                text: title
+                type: 'scatter',
+                zoomType: 'xy'
+            },title: {
+                text: 'Scatter Plot'
             },
             subtitle: {
-                text: subtitle
+                text: ''
             },
             xAxis: {
-                categories: categories
+                title: {
+                    text: 'Timeline'
+                },
+                labels: {
+                    formatter: function () {
+                        var date = new Date(this.value);
+                        var formatter = new Intl.DateTimeFormat("en-us", { month: "short" }),
+                        month = formatter.format(date);
+                        var day = date.getDate();
+                        return month+' '+day;
+                    }
+                }
             },
             yAxis: {
                 title: {
-                    text: yAxis
+                    text: 'Duration in Minutes'
                 }
             },
             legend: {
                 layout: 'vertical',
-                align: 'right',
-                verticalAlign: 'middle'
+                align: 'left',
+                verticalAlign: 'top',
+                x: 100,
+                y: 70,
+                floating: true,
+                backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
             },
-            series: seriesData,
+            series: this.getSeriesData(data),
+            plotOptions: {
+                series: {
+                    allowPointSelect: true,
+                    marker: {
+                        states: {
+                            select: {
+                                fillColor: null,
+                                lineColor: 'white',
+                                radius: 12,
+                                lineWidth: 4
+                            }
+                        }
+                    }
+                },
+            },
             responsive: {
                 rules: [{
                     condition: {
-                        maxWidth: 500
-                    },
-                    chartOptions: {
-                        legend: {
-                            layout: 'horizontal',
-                            align: 'center',
-                            verticalAlign: 'bottom'
-                        }
+                        maxWidth: 600
                     }
                 }]
+            },
+            tooltip: {
+                formatter: function() {
+                    return false;
+                }
             }
         });
     }
@@ -60,17 +116,12 @@ class Chart extends Component {
     }
 }
 Chart.propTypes = {
-    visualization: PropTypes.object,
+    data: PropTypes.array,
     visualizationId: PropTypes.string,
-    visualizationType: PropTypes.string,
 };
 
 Chart.defaultProps = {
-    visualization: { title: 'Graph', subtitle: 'subtitle', yAxis: 'Number of Employees',
-        seriesData: [],
-        categories: [],
-    },
+    data: [],
     visualizationId: 'chart',
-    visualizationType: 'line',
 };
 export default Chart;
