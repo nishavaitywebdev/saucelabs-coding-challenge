@@ -18376,7 +18376,7 @@ var App = function (_Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'col-sm-12' },
-                            _react2.default.createElement(_Chart2.default, { data: plotPoints, visualizationId: 'scatterplot' })
+                            _react2.default.createElement(_Chart2.default, { data: plotPoints })
                         )
                     ),
                     _react2.default.createElement('footer', { className: 'navbar-fixed-bottom', style: style.appFooter })
@@ -18932,11 +18932,16 @@ var Chart = function (_Component) {
             passData['data'] = [];
             errorData['data'] = [];
             failData['data'] = [];
+            passData['marker'] = { symbol: 'circle' };
+            errorData['marker'] = { symbol: 'circle' };
+            failData['marker'] = { symbol: 'circle' };
             data.forEach(function (d) {
                 var point = [];
                 var date = new Date(d.start_time);
                 var unixtime = date.getTime();
                 point.push(unixtime);
+                d.duration = d.duration < 0 ? 0 : d.duration;
+                d.duration = d.duration > 300 ? 300 : d.duration;
                 point.push(d.duration / 60);
                 if (d.status === 'pass') {
                     passData.data.push(point);
@@ -18981,12 +18986,10 @@ var Chart = function (_Component) {
                     }
                 },
                 legend: {
-                    layout: 'vertical',
-                    align: 'left',
-                    verticalAlign: 'top',
-                    x: 100,
-                    y: 70,
+                    layout: 'horizontal',
+                    align: 'right',
                     floating: true,
+                    verticalAlign: 'top',
                     backgroundColor: _highcharts2.default.theme && _highcharts2.default.theme.legendBackgroundColor || '#FFFFFF'
                 },
                 series: _this.getSeriesData(data),
