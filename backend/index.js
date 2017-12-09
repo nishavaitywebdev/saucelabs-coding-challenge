@@ -11,8 +11,7 @@ const initiate = (app) => {
                     "start_time": "2017-10-30T02:24:12Z",
                     "status": "fail",
                     "duration": 20,
-                },
-                {
+                }, {
                     "start_time": "2017-10-31T02:24:12Z",
                     "status": "fail",
                     "duration": 20,
