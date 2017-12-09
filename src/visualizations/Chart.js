@@ -110,7 +110,6 @@ class Chart extends Component {
             }
         });
     }
-
     render() {
         return (
             <div className='' id={this.props.visualizationId}>

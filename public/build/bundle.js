@@ -18367,7 +18367,7 @@ var App = function (_Component) {
                         _react2.default.createElement(
                             'h1',
                             { className: 'App-title' },
-                            'SauceLabs technical test'
+                            'SauceLabs Coding Challenge'
                         )
                     ),
                     _react2.default.createElement(
@@ -18376,7 +18376,7 @@ var App = function (_Component) {
                         _react2.default.createElement(
                             'div',
                             { className: 'col-sm-12' },
-                            _react2.default.createElement(_Chart2.default, { data: plotPoints })
+                            _react2.default.createElement(_Chart2.default, { data: plotPoints, visualizationId: 'scatterplot' })
                         )
                     ),
                     _react2.default.createElement('footer', { className: 'navbar-fixed-bottom', style: style.appFooter })

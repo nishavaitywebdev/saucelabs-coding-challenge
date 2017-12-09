@@ -46,11 +46,11 @@ class App extends Component {
             return (
                 <div style={style.app}>
                     <header style={style.appHeader}>
-                        <h1 className='App-title'>SauceLabs technical test</h1>
+                        <h1 className='App-title'>SauceLabs Coding Challenge</h1>
                     </header>
                     <div className='container'>
                         <div className='col-sm-12'>
-                            <Chart data={plotPoints} />
+                            <Chart data={plotPoints} visualizationId='scatterplot'/>
                         </div>
                     </div>
                     <footer className='navbar-fixed-bottom' style={style.appFooter}>

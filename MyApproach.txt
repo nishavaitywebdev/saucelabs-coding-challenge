@@ -1,0 +1,6 @@
+1) In component App first fetch data from server by calling api '/getPlotPoints'.
+2) When component mounts, the data is provided to Chart component by setting its 'data' prop.
+3) Chart component processes the data as required and displays the chart. Chart component also
+takes in a unique visualizationId so that the component can be reused by passing unique id every time.
+4) I am using Highcharts library for plotting charts.
+5) The scatter points can be selected/deselected(to select multiple, command+click).
