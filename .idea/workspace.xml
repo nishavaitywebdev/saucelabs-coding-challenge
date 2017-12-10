@@ -34,26 +34,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/visualizations/Chart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="121" column="19" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="19" />
+            <state relative-caret-position="60">
+              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
-                <element signature="e#0#4028#0" expanded="false" />
-                <element signature="e#0#4028#0" expanded="false" />
-                <element signature="e#0#4028#0" expanded="false" />
-                <element signature="e#0#4028#0" expanded="false" />
+                <element signature="e#0#4031#0" expanded="false" />
+                <element signature="e#0#4031#0" expanded="false" />
+                <element signature="e#0#4031#0" expanded="false" />
+                <element signature="e#0#4031#0" expanded="false" />
+                <element signature="e#0#4031#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyApproach.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyApproach.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyApproach.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="102" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+            <state relative-caret-position="75">
+              <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -82,9 +83,9 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/backend/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/visualizations/Chart.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/MyApproach.txt" />
+        <option value="$PROJECT_DIR$/src/visualizations/Chart.js" />
       </list>
     </option>
   </component>
@@ -683,19 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/visualizations/Chart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="121" column="19" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#4028#0" expanded="false" />
-            <element signature="e#0#4028#0" expanded="false" />
-            <element signature="e#0#4028#0" expanded="false" />
-            <element signature="e#0#4028#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -710,9 +698,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyApproach.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="102" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+        <state relative-caret-position="75">
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/visualizations/Chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#4031#0" expanded="false" />
+            <element signature="e#0#4031#0" expanded="false" />
+            <element signature="e#0#4031#0" expanded="false" />
+            <element signature="e#0#4031#0" expanded="false" />
+            <element signature="e#0#4031#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

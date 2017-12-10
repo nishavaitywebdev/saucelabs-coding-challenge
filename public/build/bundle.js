@@ -18955,6 +18955,7 @@ var Chart = function (_Component) {
             return seriesData;
         }, _this.showChart = function () {
             var data = _this.props.data;
+            console.log(_highcharts2.default.getOptions().colors);
             var visualizationId = _this.props.visualizationId;
             _highcharts2.default.chart(visualizationId, {
                 chart: {
@@ -19000,9 +19001,9 @@ var Chart = function (_Component) {
                             states: {
                                 select: {
                                     fillColor: null,
-                                    lineColor: 'white',
+                                    lineColor: '#F3F0F0',
                                     radius: 12,
-                                    lineWidth: 4
+                                    lineWidth: 3
                                 }
                             }
                         }

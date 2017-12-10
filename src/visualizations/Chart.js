@@ -88,9 +88,9 @@ class Chart extends Component {
                         states: {
                             select: {
                                 fillColor: null,
-                                lineColor: 'white',
+                                lineColor: '#F3F0F0',
                                 radius: 12,
-                                lineWidth: 4
+                                lineWidth: 3,
                             }
                         }
                     }
