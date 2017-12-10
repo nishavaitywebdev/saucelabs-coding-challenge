@@ -18331,6 +18331,23 @@ var App = function (_Component) {
 
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
+        _this.getDataInRange = function () {
+            var st = _this.refs.strt.value;
+            var end = _this.refs.end.value;
+            var opts = {
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'GET',
+                credentials: 'same-origin'
+            };
+            (0, _isomorphicFetch2.default)('getPlotPointsInRange/' + st + '/' + end, opts).then(function (response) {
+                return response.json();
+            }).then(function (jsonResponse) {
+                _this.setState({ plotPoints: jsonResponse.plotPoints });
+            });
+        };
+
         _this.state = {};
         return _this;
     }
@@ -18356,7 +18373,10 @@ var App = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
+            var _this3 = this;
+
             var plotPoints = this.state.plotPoints;
+            console.log(plotPoints);
             if (plotPoints) {
                 return _react2.default.createElement(
                     'div',
@@ -18367,7 +18387,7 @@ var App = function (_Component) {
                         _react2.default.createElement(
                             'h1',
                             { className: 'App-title' },
-                            'SauceLabs Coding Challenge'
+                            'Sauce Labs Coding Challenge'
                         )
                     ),
                     _react2.default.createElement(
@@ -18377,6 +18397,21 @@ var App = function (_Component) {
                             'div',
                             { className: 'col-sm-12' },
                             _react2.default.createElement(_Chart2.default, { data: plotPoints, visualizationId: 'scatterplot' })
+                        ),
+                        _react2.default.createElement(
+                            'div',
+                            null,
+                            'Start date: ',
+                            _react2.default.createElement('input', { type: 'text', ref: 'strt', placeholder: 'start date in yyyy-mm-dd' }),
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement('br', null),
+                            'End date: ',
+                            _react2.default.createElement('input', { type: 'text', ref: 'end', placeholder: 'end date in yyyy-mm-dd' }),
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement('br', null),
+                            _react2.default.createElement('input', { type: 'button', value: 'Submit', onClick: function onClick() {
+                                    return _this3.getDataInRange();
+                                } })
                         )
                     ),
                     _react2.default.createElement('footer', { className: 'navbar-fixed-bottom', style: style.appFooter })
@@ -18955,7 +18990,6 @@ var Chart = function (_Component) {
             return seriesData;
         }, _this.showChart = function () {
             var data = _this.props.data;
-            console.log(_highcharts2.default.getOptions().colors);
             var visualizationId = _this.props.visualizationId;
             _highcharts2.default.chart(visualizationId, {
                 chart: {
@@ -19028,6 +19062,11 @@ var Chart = function (_Component) {
     _createClass(Chart, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
+            this.showChart();
+        }
+    }, {
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate() {
             this.showChart();
         }
     }, {

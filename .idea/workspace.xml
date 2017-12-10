@@ -20,31 +20,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
+            <state relative-caret-position="282">
+              <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
               <folding>
-                <element signature="e#0#1813#0" expanded="false" />
-                <element signature="e#0#1813#0" expanded="false" />
-                <element signature="e#0#1813#0" expanded="false" />
+                <element signature="e#0#2773#0" expanded="false" />
+                <element signature="e#0#2773#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Chart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/visualizations/Chart.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
-              <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
               <folding>
-                <element signature="e#0#4031#0" expanded="false" />
-                <element signature="e#0#4031#0" expanded="false" />
-                <element signature="e#0#4031#0" expanded="false" />
-                <element signature="e#0#4031#0" expanded="false" />
-                <element signature="e#0#4031#0" expanded="false" />
+                <element signature="e#0#4089#0" expanded="false" />
+                <element signature="e#0#4089#0" expanded="false" />
+                <element signature="e#0#4089#0" expanded="false" />
+                <element signature="e#0#4089#0" expanded="false" />
+                <element signature="e#0#4089#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,10 +80,10 @@
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/backend/index.js" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/MyApproach.txt" />
+        <option value="$PROJECT_DIR$/backend/index.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/visualizations/Chart.js" />
       </list>
     </option>
@@ -147,6 +146,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saucelabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="saucelabs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,46 +666,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="70" column="27" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-            <element signature="e#0#2799#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="52" column="81" selection-start-line="52" selection-start-column="81" selection-end-line="52" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#1813#0" expanded="false" />
-            <element signature="e#0#1813#0" expanded="false" />
-            <element signature="e#0#1813#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,16 +682,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/visualizations/Chart.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding>
-            <element signature="e#0#4031#0" expanded="false" />
-            <element signature="e#0#4031#0" expanded="false" />
-            <element signature="e#0#4031#0" expanded="false" />
-            <element signature="e#0#4031#0" expanded="false" />
-            <element signature="e#0#4031#0" expanded="false" />
+            <element signature="e#0#4089#0" expanded="false" />
+            <element signature="e#0#4089#0" expanded="false" />
+            <element signature="e#0#4089#0" expanded="false" />
+            <element signature="e#0#4089#0" expanded="false" />
+            <element signature="e#0#4089#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="58" column="14" selection-start-line="58" selection-start-column="14" selection-end-line="58" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#2773#0" expanded="false" />
+            <element signature="e#0#2773#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 
 class Chart extends Component {
-
     componentDidMount(){
+        this.showChart();
+    }
+    componentDidUpdate() {
         this.showChart();
     }
     getSeriesData = (data) => {

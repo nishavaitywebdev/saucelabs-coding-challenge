@@ -68,9 +68,24 @@ const initiate = (app) => {
                     "status": "pass",
                     "duration": 200,
                 }];
-    app.get("/getPlotPoints",
+    app.get('/getPlotPoints',
         (req, res) => res.send({plotPoints: plotPoints})
     );
+    app.get('/getPlotPointsInRange/:st/:end', (req, res) => sendFilteredData(req, res));
+
+    sendFilteredData = (req, res) => {
+        var stDate = new Date(req.params.st).getTime();
+        var endDate = new Date(req.params.end).getTime();
+        var points = [];
+        plotPoints.forEach((p) => {
+            var pDate = new Date(p.start_time).getTime();
+            console.log(pDate);
+            if(pDate <= endDate && pDate >= stDate){
+                points.push(p);
+            }
+        });
+        res.send({plotPoints: points});
+    };
 };
 
 module.exports = {

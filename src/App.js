@@ -40,17 +40,39 @@ class App extends Component {
             this.setState({plotPoints: jsonResponse.plotPoints});
         });
     }
+    getDataInRange = () => {
+        var st = this.refs.strt.value;
+        var end = this.refs.end.value;
+        const opts = {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            method: 'GET',
+            credentials: 'same-origin',
+        };
+        fetch('getPlotPointsInRange/'+st+'/'+end, opts)
+        .then(response => response.json())
+        .then((jsonResponse) => {
+            this.setState({plotPoints: jsonResponse.plotPoints});
+        });
+    };
     render() {
         const plotPoints = this.state.plotPoints;
+        console.log(plotPoints);
         if(plotPoints){
             return (
                 <div style={style.app}>
                     <header style={style.appHeader}>
-                        <h1 className='App-title'>SauceLabs Coding Challenge</h1>
+                        <h1 className='App-title'>Sauce Labs Coding Challenge</h1>
                     </header>
                     <div className='container'>
                         <div className='col-sm-12'>
                             <Chart data={plotPoints} visualizationId='scatterplot'/>
+                        </div>
+                        <div>
+                              Start date: <input type='text' ref='strt' placeholder='start date in yyyy-mm-dd'/><br/><br/>
+                              End date: <input type='text' ref='end' placeholder='end date in yyyy-mm-dd' /><br/><br/>
+                              <input type='button' value='Submit' onClick={() => this.getDataInRange()} />
                         </div>
                     </div>
                     <footer className='navbar-fixed-bottom' style={style.appFooter}>
