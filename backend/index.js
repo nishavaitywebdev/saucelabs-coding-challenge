@@ -64,6 +64,34 @@ const initiate = (app) => {
                     "status": "error",
                     "duration": 90,
                 }, {
+                   "start_time": "2017-11-10T02:24:12Z",
+                   "status": "fail",
+                   "duration": 20,
+                }, {
+                   "start_time": "2017-11-11T02:24:12Z",
+                   "status": "fail",
+                   "duration": 20,
+                }, {
+                   "start_time": "2017-11-12T05:24:12Z",
+                   "status": "pass",
+                   "duration": 100,
+                }, {
+                   "start_time": "2017-11-13T06:24:12Z",
+                   "status": "error",
+                   "duration": 90,
+                }, {
+                  "start_time": "2017-11-14T02:24:12Z",
+                  "status": "fail",
+                  "duration": 50,
+                }, {
+                  "start_time": "2017-11-15T05:24:12Z",
+                  "status": "pass",
+                  "duration": 250,
+                }, {
+                  "start_time": "2017-11-16T06:24:12Z",
+                  "status": "error",
+                  "duration": 80,
+                }, {
                     "start_time": "2017-11-28T14:12:12Z",
                     "status": "pass",
                     "duration": 200,
