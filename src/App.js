@@ -58,7 +58,6 @@ class App extends Component {
     };
     render() {
         const plotPoints = this.state.plotPoints;
-        console.log(plotPoints);
         if(plotPoints){
             return (
                 <div style={style.app}>

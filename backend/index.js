@@ -79,7 +79,6 @@ const initiate = (app) => {
         var points = [];
         plotPoints.forEach((p) => {
             var pDate = new Date(p.start_time).getTime();
-            console.log(pDate);
             if(pDate <= endDate && pDate >= stDate){
                 points.push(p);
             }

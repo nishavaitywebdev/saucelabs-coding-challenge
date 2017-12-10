@@ -18376,7 +18376,6 @@ var App = function (_Component) {
             var _this3 = this;
 
             var plotPoints = this.state.plotPoints;
-            console.log(plotPoints);
             if (plotPoints) {
                 return _react2.default.createElement(
                     'div',
