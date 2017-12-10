@@ -4,3 +4,5 @@
 takes in a unique visualizationId so that the component can be reused by passing unique id every time.
 4) I am using Highcharts library for plotting charts.
 5) The scatter points can be selected/deselected(to select multiple, command+click).
+6) Time range in yyyy-mm-dd format can be put in the form boxes to update data points displayed on graph.
+I am using api '/getPlotPointsInRange/:st/:end' to filter data points
